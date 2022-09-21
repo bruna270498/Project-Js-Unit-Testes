@@ -44,6 +44,12 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     expect(produto[0]).not.toStrictEqual(produto[1])
     // Teste se os dois productIds terminam com 123.
-    // const objeto = Object.values(produto)
+    const productId = produto.map(function(element){
+      return `${element.details.productId}`;
+  })
+    const o = productId[0];
+    const a = productId[1];
+    expect(o.endsWith('123')).toBeTruthy()
+    expect(a.endsWith('123')).toBeTruthy()
   });
 });
