@@ -41,5 +41,5 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-
+productDetails('carro', 'mascaa');
 module.exports = productDetails;
